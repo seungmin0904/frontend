@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* [target] {
+            text-decoration: none;
+        } */
+        [target="_blank"] {
+            text-decoration: none;
+        }
+
+        [title~="dog"] {
+            border: 50px solid green;
+        }
+
+        [class^="test"] {
+            background: salmon;
+        }
+
+        [class$="test"] {
+            background: red;
+        }
+
+        [class*="test"] {
+            background: blue;
+        }
+
+
+
+        /* 글자 굵게 font-weight:bold, border-radius:20px, padding:10px, color */
+        [class^="btn-"] {
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        [class$="success"] {
+            color: green;
+        }
+
+        [class$="danger"] {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="#" target="_blank">google</a></li>
+        <li><a href="#" target="_blank">naver</a></li>
+        <li><a href="#" target="_self">daum</a></li>
+    </ul>
+    <img src="../../image/image1.jpg" alt="" title="dog" />
+    <img src="../../image/image1.jpg" alt="" title="ad dog" />
+    <img src="../../image/image1.jpg" alt="" title="asdf dog" />
+    <div class="testing">First</div>
+    <div class="second_test">second</div>
+    <div class="test">Third</div>
+    <div class="test_ex">Fourth</div>
+
+    <button class="btn-success">Success</button>
+    <button class="btn-danger">Danger</button>
+    <button>Normal</button>
+</body>
+
+</html>
