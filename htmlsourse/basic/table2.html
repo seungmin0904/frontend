@@ -5,43 +5,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            height: 250px;
+
+        }
+
+        h2 {
+            text-shadow: brown;
+        }
+
+        table td {
+            border-bottom: 1px solid red;
+        }
+
+        th {
+            background-color: aqua;
+        }
+
+        td {
+            text-align: left;
+        }
+
+        tr td {
+            text-align: center;
+
+        }
+
+        .csss {
+            background-image: url(../image/bg1.jpg);
+        }
+
+        .mail,
+        .addr,
+        .phone {
+            text-align: left;
+        }
+    </style>
 </head>
 
 <body>
-    <table border="1" width="600">
-        <tr>
+    <table border="table">
+        <tr class="csss">
             <td rowspan="4">
                 <img src="" alt="">
             </td>
             <td colspan="4">
-                <h2>asd</h2>
+                <h2>이력서</h2>
             </td>
         </tr>
         <tr>
             <td rowspan="3">이름</td>
-            <td colspan="2" rowspan="3"></td>
-            <td>생일</td>
+            <td colspan="2" rowspan="3">asd</td>
+            <td rowspan="3">생일</td>
+
+
+
         </tr>
         <tr>
         <tr>&nbsp;</tr>
         </tr>
         <tr>
-            <td>메일</td>
-            <td colspan="4"></td>
+            <td class="mail">메일</td>
+            <td colspan="4">asd</td>
         </tr>
         <tr>
-            <td>주소</td>
-            <td colspan="4"></td>
+            <td class="addr">주소</td>
+            <td colspan="4">asd</td>
         </tr>
         <tr>
-            <td>연락</td>
-            <td colspan="4"></td>
+            <td class="phone">연락</td>
+            <td colspan="4">asd</td>
         </tr>
         <tr>
             <td>기간</td>
-            <td colspan="2">학력</td>
+            <td colspan="3">학력</td>
             <td colspan="2">비고</td>
-
+        </tr>
+        <tr>
+            <td colspan="1">asd</td>
+            <td colspan="3">asd</td>
+            <td colspan="1">asd</td>
         </tr>
     </table>
 </body>
