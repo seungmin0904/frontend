@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .food-slide {
+            border: 2px solid green;
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            /*화면 가운데 수평*/
+            padding: 10px;
+            position: relative;
+
+        }
+
+        img {
+            width: 400px;
+            height: 300px;
+            float: left;
+        }
+
+        .controls a {
+            background-color: #333;
+
+            text-align: center;
+            line-height: 50px;
+            display: block;
+            color: white;
+            position: absolute;
+            white-space: nowrap;
+            /*공백 기준으로 엔터처리 하지마라*/
+            top: calc(50%-25px);
+        }
+
+        .prev {
+            right: 100%;
+        }
+
+        .next {
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="food-slide"></div>
+    <img src="../../image/food.jpg" alt="">
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, debitis. Assumenda repellat maiores qui
+        incidunt, at voluptatum! Nisi aliquam error porro repudiandae similique esse? Aspernatur quasi commodi
+        dignissimos soluta incidunt.
+    </p>
+    <p>
+    <div class="controls">
+        <a href="" class="prev">Previous Project</a>
+        <a href="" class="next">Next Project</a>
+    </div>
+    </p>
+</body>
+
+</html>

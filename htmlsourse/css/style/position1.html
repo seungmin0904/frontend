@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* lastest-news 테두리 2px , 너비 350,높이 145*/
+        /* readmore 안쪽여백 위아래 0 좌우 10 밑줄제거 글자색 흰색 배경색 검정색*/
+
+        .round {
+            border: 2px solid;
+            width: 410px;
+            height: 200px;
+
+
+        }
+
+        .lastest-news {
+            border: 2px solid;
+            width: 350px;
+            height: 145px;
+            margin-top: 40px;
+            position: relative;
+            margin-left: 5px;
+
+        }
+
+        .read-more {
+
+            text-decoration: none;
+            color: white;
+            background: black;
+            padding: 0 10px;
+            position: absolute;
+            top: 20px;
+            right: 420px;
+            bottom: calc(100%+10px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="round">
+        <ul class="lastest-news">
+            <li>리스트1</li>
+            <li>리스트2</li>
+            <li>리스트3</li>
+            <li>리스트4</li>
+            <li>리스트5</li>
+        </ul>
+        <a href="" class="read-more">ReadMore</a>
+
+    </div>
+</body>
+
+</html>

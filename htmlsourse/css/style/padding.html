@@ -11,7 +11,7 @@
             background-color: brown;
             /* height: 100px; */
             padding: 20px;
-            /* padding: 시계방향(top,right,bottom,left) */
+            /* padding(안쪽여백): 시계방향(top,right,bottom,left) */
             /* padding: 10px 5px 15px 10px; */
             /* padding: 10px 15px 20px; */
         }
@@ -19,9 +19,32 @@
         span {
             font-size: 24px;
             background-color: beige;
-            padding: 40px 40px;
+            padding: 20px 20px;
+            display: inline-block;
 
+        }
 
+        div {
+            margin: 20px;
+            text-align: center;
+            /* margin(바깥쪽여백): 시계방향(top,right,bottom,left)*/
+        }
+
+        div a {
+            width: 40px;
+            height: 40px;
+            background-color: blue;
+            color: white;
+            display: inline-block;
+            text-decoration: none;
+            line-height: 40px;
+
+        }
+
+        p:nth-of-type(2) {
+            display: none;
+            /* (해당 태그의 위치와 요소를 없앰) */
+            /* visibility: hidden; (해당 태그의 위치는 남기고 요소만 없앰) */
         }
     </style>
 </head>
@@ -29,11 +52,17 @@
 <body>
     <!-- 
     block(p,div) : 한 행을 다 사용 / width : 기본 100% , height : 기본 내용만큼만,크기 설정 가능
-    inline(a,span) : 내용만큼만 사용 / width와 height를 가질 수 없음
+    inline(a,span) : 내용만큼만 사용 / width와 height를 가질 수 없음 / 상,하 padding 적용X
 
+    display: inline, block, inline-block, none(해당 태그의 요소를 감춤)
+
+    magin 중복(병합) - margin-top과 bottom 등 여러 각도에서 만났을때 마진의 특정 값들이 
+                       중복되어 합쳐지고 좌,우는 중복병합이 일어나지 않음
+    
 -->
     <p>block level</p>
     <span>inline level</span>
+    <span>inline level2</span>
 
     <div>
         <a href="">1</a>
@@ -41,6 +70,15 @@
         <a href="">3</a>
         <a href="">4</a>
         <a href="">5</a>
+    </div>
+    <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Voluptas optio corrupti inventore quam minima cum quasi fugit fugiat dolore qui
+        facere, dolores laboriosam velit consequuntur. Magni fuga commodi reiciendis quasi!
+    </p>
+    <div>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi aliquam qui,
+        repellat, iste cumque provident explicabo inventore impedit quisquam facere consectetur
+        mollitia! Alias voluptates cupiditate quidem assumenda, aliquid sit saepe?
     </div>
 </body>
 

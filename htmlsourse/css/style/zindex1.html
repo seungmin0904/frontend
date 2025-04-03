@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 전체 box 크기 100 * 100 배경색은 다르게 임의로 boxgroup을 부모 , 자식은 약간 겹치게 -->
+    <style>
+        .box-group {
+            position: relative;
+        }
+
+        .box {
+
+            height: 100px;
+            width: 100px;
+        }
+
+        .box1 {
+            border: 2px solid black;
+            background: red;
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            z-index: 1;
+        }
+
+        .box2 {
+            border: 2px solid black;
+            background: green;
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            z-index: 3;
+        }
+
+        .box3 {
+            border: 2px solid black;
+            background: yellow;
+            position: absolute;
+            left: 80px;
+            top: 80px;
+            z-index: 2;
+        }
+    </style>
+    <!-- z-index : 요소가 겹쳤을때 요소가 비춰지는 우선순위를 지정(position 적용된요소만)  -->
+</head>
+
+<body>
+    <div class="box-group">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+
+</html>

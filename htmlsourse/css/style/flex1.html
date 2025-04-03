@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .con {
+            display: flex;
+            /* block inline inline block none flex*/
+            flex-direction: row;
+            /* row(default), reverse는 역순*/
+        }
+
+        .con div {
+            background-color: silver;
+            width: 33.33%;
+            height: 200px;
+            margin: 0 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <!--flex - 
+      수평배치: float,inline-block 사용 
+      - float : 해제코드 필요 / inline-block : 자동처리 되는 공백이 있음
+      
+      - 수평배치 개선 방법 : flex
+
+        flex
+        1)컨테이너 : 상하 좌우 배치되어야 할 아이템을 가지고 있는 부모요소
+        - display : flex;
+
+        2)아이템
+        
+
+    -->
+    <div class="con">
+        <div>flex1</div>
+        <div>flex2</div>
+        <div>flex3</div>
+
+    </div>
+</body>
+
+</html>

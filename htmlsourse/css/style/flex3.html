@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .con {
+            display: flex;
+            border: 2px solid;
+        }
+
+        .con div {
+            /* width: 100px; */
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /*한줄 가운데 정렬*/
+            font-size: 30px;
+            flex-grow: 1;
+            flex-basis: 0;
+        }
+
+        .con .item:nth-child(1) {
+            background-color: red;
+        }
+
+        .con .item:nth-child(2) {
+            background-color: beige;
+        }
+
+        .con .item:nth-child(3) {
+            background-color: blue;
+            order: -1;
+            flex: 2;
+        }
+
+        .con .item:nth-child(4) {
+            background-color: orange;
+        }
+
+        .con .item:nth-child(5) {
+            background-color: brown;
+        }
+
+        .con .item:nth-child(6) {
+            background-color: yellow;
+            order: -2;
+        }
+    </style>
+</head>
+
+<body>
+    <!--flex - 
+      수평배치: float,inline-block 사용 
+      - float : 해제코드 필요 / inline-block : 자동처리 되는 공백이 있음
+      
+      - 수평배치 개선 방법 : flex
+
+        flex
+        1)컨테이너 : 상하 좌우 배치되어야 할 아이템을 가지고 있는 부모요소
+        - display , flex-direction , flex-wrap
+        - 주축 : display가 row일때 x축 , display가 column 일때 y축
+        - 교차축 : display가 row일때 y축 , display가 column 일때 x축
+        - justify-content :
+        1) flex-start : 왼쪽정렬
+        2) flex-end : 오른쪽정렬
+        3) flex-center : 가운데 정렬
+        4) space-around : 요소들이 좌우 여백을 동일하게 가짐(중첩되는 영역은 다른영역보다 커짐)
+        5) space-evenly : 모든 요소들이 공백을 동일하게 나눠가짐
+        6) space-between : 처음과 마지막 요소를 각끝에 붙이고 나머지 여백을 나눠가짐
+        -align-content: flex-wrap: wrap 상태에서 교차 축의 정렬 방법
+         justify-content 와 기능 동일함
+        -align-items : 한줄일때 정렬
+
+        2)아이템
+        - order : 기본값은 0, 기본순서는 태그 순서, 값이 클수록 뒤에놓임
+        - flex-grow : 자식요소의 컨텐츠를 제외한 영역의 공간을 1로 나눠 갖는다
+        - flex-basis : 자식요소의 컨텐츠를 포함하여 전체 너비를 1로 나눠갖게 만든다
+        - flex-shrink : 감소비율   
+        - 축약형 : flex : 1(증가) 1(감소) auto(basis)
+
+    -->
+    <div class="con">
+        <div class="item">1123123</div>
+        <div class="item">2</div>
+        <div class="item">31231231123</div>
+        <!-- <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div> -->
+
+
+    </div>
+</body>
+
+</html>
