@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 전체 여백 0 */
+        /* 바디 배경색 : #ecf0f1 */
+        /* wrapper : max-width : 60rem, width: 100% */
+        /* flexbg : flex 컨테이너 */
+        /* main : 배경색 흰색 , padding 25px order 2 */
+        /* left : 배경색 #3498db  order 1 */
+        /* left : 배경색 #34495e  order 3 */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: #ecf0f1;
+        }
+
+        .wra {
+            width: 100%;
+            max-width: 60rem;
+            margin: 2rem auto;
+        }
+
+        .flexbg {
+            display: flex;
+
+        }
+
+        main {
+            background: white;
+            padding: 25px;
+            order: 2;
+        }
+
+        .flexbg .left {
+            background: #3498db;
+            order: 1;
+
+        }
+
+        .flexbg .right {
+            background: #34495e;
+            order: 3;
+        }
+
+        .flexbg .side {
+            padding: 25px;
+            width: 20%;
+        }
+
+        /* 481~768  */
+        @media screen and (max-width:768px) {
+            .flexbg {
+                /* display: flex; */
+                flex-wrap: wrap;
+
+            }
+
+            .flexbg main {
+                width: 100%;
+                order: 1;
+
+            }
+
+            .flexbg .left {
+                order: 2;
+
+            }
+
+            .flexbg .right {
+                order: 3;
+            }
+
+            .flexbg .side {
+
+                width: 50%;
+            }
+        }
+
+        /* 0~480 */
+        @media screen and (max-width:480px) {
+            .flexbg .side {
+
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wra flexbg">
+        <main>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus soluta totam, molestiae
+                odit quam sed modi porro maxime alias blanditiis impedit velit veniam ab quo cupiditate, et eligendi
+                dolorum sint suscipit nobis. Optio, distinctio. Tempore, doloremque eligendi delectus ad blanditiis,
+                adipisci quo sequi dignissimos corrupti obcaecati cum dolores numquam recusandae modi dolorem mollitia
+                explicabo, provident minima amet at voluptates. Qui in, autem delectus at voluptates officiis corporis
+                vel distinctio cupiditate velit eum harum nostrum labore ipsa ad quos excepturi quia adipisci inventore
+                rem, dolore natus. A est, suscipit, aliquam rerum eligendi inventore nemo, delectus iusto doloremque
+                ducimus dolores vero.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci repellendus soluta totam, molestiae
+                odit quam sed modi porro maxime alias blanditiis impedit velit veniam ab quo cupiditate, et eligendi
+                dolorum sint suscipit nobis. Optio, distinctio. Tempore, doloremque eligendi delectus ad blanditiis,
+                adipisci quo sequi dignissimos corrupti obcaecati cum dolores numquam recusandae modi dolorem mollitia
+                explicabo, provident minima amet at voluptates. Qui in, autem delectus at voluptates officiis corporis
+                vel distinctio cupiditate velit eum harum nostrum labore ipsa ad quos excepturi quia adipisci inventore
+                rem, dolore natus. A est, suscipit, aliquam rerum eligendi inventore nemo, delectus iusto doloremque
+                ducimus dolores vero.
+            </p>
+        </main>
+        <aside class="side left">
+            <p>You might have some latest posts here on the left</p>
+        </aside>
+        <aside class="side right">
+            <p>and some other widgets here on the right</p>
+        </aside>
+    </div>
+</body>
+
+</html>

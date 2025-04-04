@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 전체여백 0  
+     body: 배경색 #333338 글자색 #444
+     contain: flex
+     sideber: 바깥여백 10, 안쪽여백 6, 배경색 #eee
+     pan: 바깥여백 10, 안쪽여백 2, 배경색 #fff
+    -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        body {
+            background-color: #333338;
+            color: #444;
+        }
+
+        .sidebar {
+            margin: 10px;
+            padding: 6px;
+            background-color: #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+        }
+
+        .panel {
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <section class="main-content">
+            <div class="panel">
+                <h1>Main Title</h1>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi fugiat iusto veniam, dolore
+                    porro magni repellendus, cumque dolorem pariatur fugit aspernatur perspiciatis impedit repellat
+                    error inventore nobis iste! Officiis, fugit.
+                </p>
+                <img src="../../image/bg.png" alt="">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nisi consequuntur sed
+                    voluptate odit iste eum repudiandae aliquam dicta et, excepturi sapiente quam similique! Itaque
+                    dicta minima tenetur dolorem corrupti!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur nisi consequuntur sed
+                    voluptate odit iste eum repudiandae aliquam dicta et, excepturi sapiente quam similique! Itaque
+                    dicta minima tenetur dolorem corrupti!
+                </p>
+                <h3>Subtitle</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, natus vitae atque reiciendis
+                    voluptate ipsam optio totam minus quam facere tempore provident at nam? Eaque mollitia sequi illo
+                    molestiae voluptas autem veritatis, laborum expedita eos impedit enim laudantium nihil, tenetur a
+                    eligendi, nemo adipisci culpa reprehenderit quam magni vero. Sint?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, natus vitae atque reiciendis
+                    voluptate ipsam optio totam minus quam facere tempore provident at nam? Eaque mollitia sequi illo
+                    molestiae voluptas autem veritatis, laborum expedita eos impedit enim laudantium nihil, tenetur a
+                    eligendi, nemo adipisci culpa reprehenderit quam magni vero. Sint?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, natus vitae atque reiciendis
+                    voluptate ipsam optio totam minus quam facere tempore provident at nam? Eaque mollitia sequi illo
+                    molestiae voluptas autem veritatis, laborum expedita eos impedit enim laudantium nihil, tenetur a
+                    eligendi, nemo adipisci culpa reprehenderit quam magni vero. Sint?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam, natus vitae atque reiciendis
+                    voluptate ipsam optio totam minus quam facere tempore provident at nam? Eaque mollitia sequi illo
+                    molestiae voluptas autem veritatis, laborum expedita eos impedit enim laudantium nihil, tenetur a
+                    eligendi, nemo adipisci culpa reprehenderit quam magni vero. Sint?
+                </p>
+            </div>
+        </section>
+        <aside class="sidebar">
+            <div class="panel">
+                <h3>item1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel nobis veniam, nostrum in
+
+                </p>
+            </div>
+            <div class="panel">
+                <h3>item2</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel nobis veniam, nostrum in
+                    accusantium possimus. Alias amet numquam, earum, libero sunt dolorem facere aut provident quis
+                    harum, sit quae!
+                </p>
+            </div>
+            <div class="panel">
+                <h3>item3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel nobis veniam, nostrum in
+                    accusantium possimus. Alias amet numquam, earum, libero sunt dolorem facere aut provident quis
+                    harum, sit quae!
+                </p>
+            </div>
+            <div class="panel">
+                <h3>item4</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla vel nobis veniam, nostrum in
+                    accusantium possimus. Alias amet numquam, earum, libero sunt dolorem facere aut provident quis
+                    harum, sit quae!
+                </p>
+            </div>
+        </aside>
+    </div>
+</body>
+
+</html>

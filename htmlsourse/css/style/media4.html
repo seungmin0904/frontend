@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* border 까지 크기 포함 */
+        /* 컬럼 색상 : #aaa , #bbb, #ccc ,#ddd 내부 공백 : 20, width :25% */
+        /* row - flex 컨테이너 */
+        /* media max-width 992px ,600px */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .row {
+            display: flex;
+
+        }
+
+        .row .column {
+            padding: 20px;
+            width: 25%;
+        }
+
+        .row .column:nth-child(1) {
+            background: #aaa;
+        }
+
+        .row .column:nth-child(2) {
+            background: #bbb;
+        }
+
+        .row .column:nth-child(3) {
+            background: #ccc;
+        }
+
+        .row .column:nth-child(4) {
+            background: #ddd;
+        }
+
+
+
+
+
+
+        @media screen and (max-width:992px) {
+            .row {
+                flex-wrap: wrap;
+            }
+
+            .row .column {
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width:600px) {
+
+
+            .row .column {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, vitae amet blanditiis, fuga, labore
+        repudriandae officia quia itaque dolorum debitis ratione voluptate ipsam temporibus dolore ad voluptatem
+        consequuntur minus dolores soluta. Nisi error ad dolore expedita, quis rem porro. Cumque libero mollitia totam
+        sapiente voluptatem quia perferendis voluptas, dignissimos quidem!
+    </p>
+    <div class="row">
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>
+                some text...
+            </p>
+        </div>
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>
+                some text...
+            </p>
+
+        </div>
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>
+                some text...
+            </p>
+        </div>
+        <div class="column">
+            <h2>Column 4</h2>
+            <p>
+                some text...
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
