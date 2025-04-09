@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #target {
+            background-color: lightblue;
+        } */
+    </style>
+</head>
+
+<body id="target">
+    <div>
+        <input type="radio" name="color" id="" value="lightblue" /> 파랑
+        <input type="radio" name="color" id="" value="green" /> 녹색
+    </div>
+    <script>
+        // const b = document.querySelectorAll("[type='radio']");
+        // console.log(b[0]);
+        // console.log(b[1]);
+        // 파랑 radio 클릭되면 body 배경색 파랑
+        // b[0].addEventListener("click", () => (document.body.style.backgroundColor = "lightblue"));
+        // // 녹색 radio 클릭되면 body 배경색 녹색
+        // b[1].addEventListener("click", () => (document.body.style.backgroundColor = "green"));
+
+
+        // 다른 방법
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+
+        }
+        // b[0].addEventListener("click", (e) => {
+        //     const value = e.target.value;
+        //     console.log(value);
+        //     changeColor(e.target.value);
+        // });
+        // b[1].addEventListener("click", (e) => {
+        //     const value = e.target.value;
+        //     console.log(value);
+        //     changeColor(e.target.value);
+        // });
+
+        //이벤트 버블링
+        const color = document.querySelector("div");
+        color.addEventListener("click", (e) => changeColor(e.target.value));
+    </script>
+</body>
+
+</html>

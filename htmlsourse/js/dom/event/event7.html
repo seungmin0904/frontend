@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="p1">This is a paragraph.</div>
+    <button type="button">눌러보세요</button>
+    <script>
+        // button 클릭 시 p1의 스타일 변경
+        // 글자 색상, 글자 크기, 글꼴 => 임의
+        document.querySelector("button").addEventListener("click", () => {
+            const id = document.querySelector("#p1");
+            p1.style.color = "red";
+            p1.style.fontSize = 20;
+            p1.style.fontFamily = "고딕체";
+        });
+
+    </script>
+</body>
+
+</html>
