@@ -14,13 +14,22 @@
 
 /* .tab-button : 안쪽여백 :위아래 10, 왼오 20, 옆으로 배치, 글자색 gray 마우스 올리면 손모양 */   
 .tab-button{
-   
+    
     padding: 10px 20px;
     color: gray;
     cursor: pointer;
     margin-right: -1px;
     margin-bottom: -1px;
-
+}
+/* #selected-tab{
+    margin-top: 30px;
+    color: skyblue
+    } */
+    #cartBtn{
+        display: block;
+        position: absolute;
+        left: 90%;
+        position: relative;
 }
 .orange{
 border-top: 2px solid orange;
@@ -30,11 +39,21 @@ border-right: 2px solid #ccc;
 color: black;
 margin-top: -2px;
 }
-
+.tab-title-color1{
+    color: orange;
+}
+.tab-title-color2{
+    color: royalblue;
+}
+.tab-title-color3{
+    color: green;
+}
 .tab-content{
     display: none;
+    position: relative;
 }
 
 .show{
     display: block;
 }
+

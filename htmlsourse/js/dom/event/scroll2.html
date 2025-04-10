@@ -53,8 +53,11 @@
         blanditiis eum odit necessitatibus eligendi repudiandae totam error repellendus, impedit ducimus alias? Hic,
         numquam eius!
     </div>
+    <button class="button">동의</button>
+    <button class="button">동의 안함</button>
     <script>
         const div = document.querySelector("div");
+        const button = document.querySelectorAll(".button");
         // scrollHeight: div 높이 + scroll 높이
         console.log("scrollHeight", div.scrollHeight);
 
@@ -69,11 +72,22 @@
             // scrollHeight == (clientHeight + scrollTop)
             if (div.scrollHeight == div.clientHeight + div.scrollTop) {
 
-                alert("회원 약관 다 읽음");
+                console.log("스크롤 다 내림");
             }
+            
             // 스크롤을 맨위에서 맨 아래까지 안내렸을 경우에 버튼을 누르면 스크롤을 다 내려야 한다고 알림창 띄우기
 
         });
+        button[0].addEventListener("click",(e)=> {
+            if (div.scrollHeight != div.clientHeight + div.scrollTop) {
+                alert("약관을 다 읽어야 동의할 수 있습니다.");
+            }else{
+                alert("약관에 동의하셨습니다");
+            }
+        });
+        button[1].addEventListener("click",(e)=>{
+            alert("약관에 동의하지 않으셨습니다");
+        })
     </script>
 </body>
 
