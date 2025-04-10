@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .alert-box {
+            background: skyblue;
+            padding: 20px;
+            color: white;
+            border-radius: 5px;
+            margin: 10px;
+            display: none;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 5px;
+            cursor: pointer;
+        }
+
+        button {
+            border: 0;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: rgb(54, 62, 228);
+            color: white;
+        }
+
+        /* 알림창 숨기기 */
+    </style>
+</head>
+
+<body>
+    <div class="alert-box">
+        알림창
+        <span class="close">
+            X
+        </span>
+    </div>
+    <button class="show">버튼1</button>
+    <button class="show">버튼2</button>
+    <script>
+        // 버튼 1클릭 시 알림창 => 아이디 입력
+        const alertBox = document.querySelector(".alert-box")
+        const btn = document.querySelectorAll("button");
+        btn[0].addEventListener("click", () => {
+            alertBox.style.display = "block";
+            // alertBox.innerHTML = '아이디입력<span class="close">x</span>'
+            alertBox.firstChild.nodeValue = "아이디를 입력해주세요"
+            console.log(alertBox.firstChild.nodeValue);
+        })
+
+        // 버튼 2클릭 시 알림창 => 비밀번호 입력
+        btn[1].addEventListener("click", () => {
+            alertBox.style.display = "block";
+            // alertBox.innerHTML = '비밀번호입력<span class="close">x</span>'
+            alertBox.firstChild.nodeValue = "비밀번호를 입력해주세요"
+
+        })
+
+        // x누르면 닫기
+        document.querySelector(".close").addEventListener("click", () => {
+            document.querySelector(".alert-box").style.display = "none";
+        });
+    </script>
+</body>
+
+</html>

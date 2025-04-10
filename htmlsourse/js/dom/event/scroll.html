@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 4000px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // scroll 움직임 감지 
+        window.addEventListener("scroll", () => {
+            // scrollY : 브라우저 스크롤 범위 내의 y축 위치값을 알려줌
+            // console.log(window.scrollY);
+
+
+            // scrollTo: 원하는 위치에 스크롤을 강제로 이동 및 고정시킴
+            window.scrollTo(0, 200);
+            console.log(window.scrollY);
+
+            // 현재 스크롤 위치에서 값을 주고 그 값만큼 더한 위치로 이동
+            window.scrollBy(0, 100);
+            console.log(window.scrollY);
+
+        });
+    </script>
+</body>
+
+</html>
