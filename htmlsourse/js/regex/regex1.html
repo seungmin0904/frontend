@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="exec"></p>
+<script>
+    const origin = "javascript jQuery Ajax";
+    // 정규표현식 객체 생성
+    // const regEx = new RegExp("Ajax");
+    const regEx = /Ajax/;
+    console.log("exec() " , regEx.exec(origin));
+    // ['Ajax', index: 18, input: 'javascript jQuery Ajax', groups: undefined]
+    document.querySelector('#exec').textContent = regEx.exec(origin);
+    console.log("test() " , regEx.test(origin));
+    // true
+    console.log("match() " , regEx.match(regEx));
+    console.log("search() " , regEx.search(regEx));
+</script>
+</body>
+</html>

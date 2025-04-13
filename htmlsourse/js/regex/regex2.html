@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post">
+        <div>
+            <label for="name">이름</label>
+            <input type="text" name="name" id="name" />
+        </div>
+        <div>
+            <label for="tel">전화번호</label>
+            <input type="text" name="tel" id="tel" />
+        </div>
+        <button type="submit">전송</button>
+    </form>
+    <script>
+        // 이름이 한글로 입력 되었는지 확인하기
+        // 한글 2~4자리로 입력 되었는지 확인하기
+
+        // 정규표현식 : /^[가-힣]{2,4}$/g
+        const regEx1 = /^[가-힣]{2,4}$/g;
+        document.querySelector("#name").addEventListener("change", (e)=>{
+            let origin = e.target
+            if (!regEx1.test(origin.value)) {
+                alert("이름 형식이 맞지 않습니다.\n형식 : 한글 2~4자리");
+                // focus() : 포커스 이동
+                // select() : 선택 영역 지정
+                origin.select();
+                return;
+            }else{
+                alert("이름 입력이 완료되었습니다");
+            }
+        });
+        // 폼 전송 시 submit 중지 후 전화번호가 원하는 형식대로 입력 되었는지 확인하기
+        // 숫자 3자리 - 숫자 4자리 - 숫자 4자리 형식으로 입력되었는지 확인하기
+
+        // 정규표현식 : /^\d{3}-\d{4}-\d{4}$/g
+        const regEx =  /^\d{3}-\d{4}-\d{4}$/g;
+        // document.querySelector("form").addEventListener("submit", (e)=>{
+        //e.preventDefault();
+
+             document.querySelector("#tel").addEventListener("change", (e)=>{
+            let origin = e.target
+            if (!regEx.test(origin.value)) {
+                alert("전화번호 형식이 맞지 않습니다.\n형식 : 000-0000-0000");
+                // focus() : 포커스 이동
+                // select() : 선택 영역 지정
+                origin.select();
+                return;
+            }else{
+                alert("전화번호 입력이 완료되었습니다");
+            }
+        });
+
+        const re = /(\w+)\s(\w+)/;
+        const origin2 = "john Smith";
+        console.log("==match()");
+        console.log(origin2.match(re)); // ['john Smith', 'john', 'Smith', index: 0, input: 'john Smith', groups: undefined]
+        console.log(origin2);
+        // 이름의 앞 뒤를 교환
+        // replace() : 정규표현식과 일치하는 부분을 다른 문자로 교체하기
+        // $1 : 첫번째 그룹, $2 : 두번째 그룹
+        const result = origin2.replace(re, "$2 $1");   
+        console.log(result); // Smith john
+        // $1 : john, $2 : Smith
+
+        // replaceAll() : 정규표현식과 일치하는 모든 부분을 다른 문자로 교체하기
+        const origin3 = "john Smith john Smith";
+        const result2 = origin3.replaceAll(re, "$2 $1");
+        console.log(result2); // Smith john Smith john
+        // $1 : john, $2 : Smith
+
+        // 정규표현식의 그룹화
+        // () : 그룹화
+        // (?:) : 그룹화 하지않음
+        const ko = "kokokokoko";
+        // console.log("ko match ", ko.match(/(ko)+/));
+        console.log("ko match ", ko.match(/(?:ko)+/));
+    </script>
+</body>
+</html>

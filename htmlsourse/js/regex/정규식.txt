@@ -1,0 +1,13 @@
+자바 스크립트 정규 표현식
+
+정규식 생성
+-/패턴/플래그
+- new RegExp("패턴" , "플래그")
+
+메소드
+-exec() : 정규식 메소드 => 일치하는 문자열을 돌려줌
+-exec() : 정규식 메소드 => 패턴과 일치 true / 불일치 false
+-match() : String 메소드 == exec() 같은개념
+-test() : String 메소드 => 패턴이 시작하는 인덱스값
+-search() : String 메소드 =>
+-split() : String 메소드 =>

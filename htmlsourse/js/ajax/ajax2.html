@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        .container{
+            display: flex;
+            background-color: lightblue;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+        .container li{
+            list-style: none;
+            margin: 0 10px;
+            width: 25%;
+            cursor: pointer;
+        }
+        div{
+            padding: 20px;
+        }
+        table,th,td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="container">
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+        <li>메뉴4</li>
+    </ul>
+   <div></div>
+<script>
+    // 메뉴 1 클릭 시 txt 파일 데이터 가져오기
+    document.querySelector("ul li:nth-child(1)").addEventListener("click",()=>{
+        fetch("https://seungmin0904.github.io/data/data.txt")
+        .then((res) => {
+        if (!res.ok) throw new Error("경로 확인");
+        return res.text();
+        })
+        .then((data)=>{
+            console.log(data)
+            const div = document.querySelector("div");
+            div.innerHTML = data;
+
+            });
+    });    
+
+   // 메뉴 2 클릭 시 JSON 파일 데이터 가져오기
+    // JSON 파일은 fetch()로 가져온 후 .json() 메서드를 사용하여 JSON 객체로 변환
+    
+   
+    document.querySelector("ul li:nth-child(2)").addEventListener("click",()=>{
+        fetch("https://seungmin0904.github.io/data/version.json")
+        .then((res) => {
+        if (!res.ok) throw new Error("경로 확인");
+        return res.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            console.log(data.codename);
+            console.log(data.version);
+            let result = `<ul>
+                 <li>version : ${data.version}</li>
+                 <li>version : ${data.codename}</li>
+                 </ul>`;
+
+       const div=document.querySelector("div")
+            div.innerHTML = result;
+            });
+    });    
+    // 메뉴 3 클릭 시 JSON 파일 데이터 가져오기
+    document.querySelector("ul li:nth-child(3)").addEventListener("click",()=>{
+        fetch("https://seungmin0904.github.io/data/version2.json")
+        .then((res) => {
+        if (!res.ok) throw new Error("경로 확인");
+        return res.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            console.log(data.codename);
+            console.log(data.version);
+            let result = `<ul>`;
+                data.forEach((item) => {
+                    result += `<li>version : ${item.version}</li>`;
+                    result += `<li>codename : ${item.codename}</li>`;
+                    result += `</ul>`;
+                    
+                });
+                document.querySelector("div").innerHTML = result;
+
+         });
+    });    
+
+    // 메뉴 4 클릭 시 JSON 파일 데이터 가져오기
+    document.querySelector("ul li:nth-child(4)").addEventListener("click",()=>{
+        fetch("https://seungmin0904.github.io/data/MOCK_DATA.json")
+        .then((res) => {
+        if (!res.ok) throw new Error("경로 확인");
+        return res.json();
+        })
+        .then((data)=>{
+            console.log(data);
+            // table 태그로 출력하기
+            let result = `<table>`;
+            // id / first_name / email / gender /
+                result += `<tr>`;
+                result += `<th>id</th>`;
+                result += `<th>first_name</th>`;
+                result += `<th>email</th>`;
+                result += `<th>gender</th>`;
+                result += `</tr>`;
+            data.forEach((item) => {
+                result += `<tr>`;
+                result += `<td>${item.id}</td>`;
+                result += `<td>${item.first_name}</td>`;
+                result += `<td>${item.email}</td>`;
+                result += `<td>${item.gender}</td>`;
+                result += `</tr>`;
+            });
+            result += `</table>`;
+            document.querySelector("div").innerHTML = result;
+            
+        });
+    });
+    // map,join 활용
+
+    // let result = 
+    // `<table>테이블태그생성 ${data.map(item=>`반복문 활용 데이터 테이블에 넣기`).join('')} </table>`;
+
+    //  코드 작성식으로 풀어서 쓰면 아래와 같음 
+    // let result = `<table>
+    //     <tr>
+    //         <th>id</th>
+    //         <th>first_name</th>
+    //         <th>email</th>
+    //         <th>gender</th>
+    //     </tr>
+    //     ${data.map(item => `
+    //         <tr>
+    //             <td>${item.id}</td>
+    //             <td>${item.first_name}</td>
+    //             <td>${item.email}</td>
+    //             <td>${item.gender}</td>
+    //         </tr>
+    //         `).join('')}
+    //     </table>;
+    //     `;
+  
+</script>
+</body>
+</html>
